@@ -9,6 +9,11 @@ def segment(name: str) -> str:
     return SOURCE[start:] if next_def < 0 else SOURCE[start:next_def]
 
 
+def test_native_transfer_target_is_an_evm_interface_not_a_nested_contract():
+    assert "@gl.evm.contract_interface\nclass _Recipient:" in SOURCE
+    assert "class _Recipient(gl.Contract)" not in SOURCE
+
+
 def test_runtime_claim_requires_two_independent_authorities():
     freeze = segment("_runtime_evidence")
     assert "safe-transaction-mainnet.safe.global" in freeze

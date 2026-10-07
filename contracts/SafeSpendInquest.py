@@ -7,9 +7,12 @@ import json
 import typing
 
 
-class _Recipient(gl.Contract):
-    @gl.external.write.payable
-    def emit_transfer(self) -> None:
+@gl.evm.contract_interface
+class _Recipient:
+    class View:
+        pass
+
+    class Write:
         pass
 
 
