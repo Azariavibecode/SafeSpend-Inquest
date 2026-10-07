@@ -66,7 +66,12 @@ npm run build
 
 ## Deployment
 
-Deploy `contracts/SafeSpendInquest.py` to GenLayer StudioNet. Put the resulting address in `VITE_CONTRACT_ADDRESS` or paste it into the visible contract bar. The UI persists the configured address locally and links it to Explorer.
+Current StudioNet deployment:
+
+- Contract: [`0xC9C416776A42676Ecd8b462465705c0834081678`](https://explorer-studio.genlayer.com/address/0xC9C416776A42676Ecd8b462465705c0834081678)
+- Source release: repository commit `243bd05d69ba94ebb79e9379ab0b52d889f973ae`
+
+The address is the frontend default. A reviewer may replace it in the visible contract bar; the UI persists that explicit selection locally and links it to Explorer.
 
 ## Reviewer quick path
 
