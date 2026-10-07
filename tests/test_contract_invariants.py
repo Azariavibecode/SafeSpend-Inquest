@@ -20,6 +20,8 @@ def test_runtime_claim_requires_two_independent_authorities():
     assert "eth.blockscout.com/api/v2/transactions/" in freeze
     assert 'isExecuted") is not True' in freeze
     assert 'receipt.get("status"' in freeze
+    assert 'receipt.get("to", {}).get("hash"' in freeze
+    assert 'receipt.get("from", {}).get("hash"' not in freeze
 
 
 def test_policy_content_is_bound_to_github_objects_and_bytes():

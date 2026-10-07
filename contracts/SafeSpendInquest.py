@@ -209,7 +209,10 @@ class Contract(gl.Contract):
         receipt = json.loads(receipt_response.body.decode("utf-8"))
         if str(receipt.get("hash", "")).lower() != runtime_hash or str(receipt.get("status", "")).lower() not in ["ok", "success"]:
             return None
-        if str(receipt.get("from", {}).get("hash", "")).lower() != expected_safe:
+        # Ethereum executes Safe transactions by calling Safe.execTransaction:
+        # the outer receipt `from` is an executor EOA/relayer and `to` is the
+        # Safe contract. Safe-service identity above binds the inner object.
+        if str(receipt.get("to", {}).get("hash", "")).lower() != expected_safe:
             return None
         return {
             "data": str(safe_data.get("data") or "")[:12000], "operation": int(safe_data.get("operation", -1)),

@@ -10,7 +10,7 @@ For policy epoch `P` and Safe transaction object `S`, establish whether the **su
 - Safe transaction belongs to a different Safe.
 - Safe transaction is not executed or lacks a mapped Ethereum hash.
 - Blockscout does not report the mapped hash successful.
-- Runtime sender is not the registered Safe.
+- Runtime receipt target is not the registered Safe. The outer sender is an executor EOA/relayer and is not treated as the Safe identity.
 - Policy is ambiguous about a consequential recipient, action or value.
 
 Any deterministic binding failure stops before semantic adjudication. Source unavailability is `RUNTIME_UNVERIFIED` or `SOURCE_UNVERIFIED`, never `BREACH`.

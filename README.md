@@ -66,12 +66,13 @@ npm run build
 
 ## Deployment
 
-Current StudioNet deployment:
+Superseded StudioNet deployment (do not submit):
 
 - Contract: [`0xC9C416776A42676Ecd8b462465705c0834081678`](https://explorer-studio.genlayer.com/address/0xC9C416776A42676Ecd8b462465705c0834081678)
 - Source release: repository commit `243bd05d69ba94ebb79e9379ab0b52d889f973ae`
+- Status: superseded before E2E because it compared the Ethereum receipt executor (`from`) to the Safe instead of the `execTransaction` target (`to`).
 
-The address is the frontend default. A reviewer may replace it in the visible contract bar; the UI persists that explicit selection locally and links it to Explorer.
+The next corrected address will replace this frontend default after deployment. A reviewer may replace it in the visible contract bar; the UI persists that explicit selection locally and links it to Explorer.
 
 ## Reviewer quick path
 
