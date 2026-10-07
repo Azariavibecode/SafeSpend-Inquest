@@ -1,0 +1,1 @@
+{"name":"safespend-inquest","private":true,"scripts":{"test":"python -m pytest","build":"npm --prefix frontend run build"}}
