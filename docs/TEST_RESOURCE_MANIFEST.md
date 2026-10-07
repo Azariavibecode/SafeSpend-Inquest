@@ -4,7 +4,7 @@ Complete this document with exact immutable values **before** live execution.
 
 | Resource | Authority / owner | Claim scope | Immutable binding | Beneficiary-controlled? | Limitation |
 |---|---|---|---|---:|---|
-| Policy fixture | repository author | exact declared policy bytes | owner/repo/full commit/path/blob SHA/SHA-256 | yes | cannot prove official Safe policy or runtime behavior |
+| Policy fixture | Azariavibecode | exact declared policy bytes | `Azariavibecode/SafeSpend-Inquest` @ `f7e086259ba0244f6bca660215f3f37eefe4aff3`, `/fixtures/policies/example-policy.md`, SHA-256 `ecf0c00801af162466e18536f5fc6f298133f96034a1c62552864f271a2269d1` | yes | cannot prove official Safe policy or runtime behavior |
 | Safe tx endpoint | Safe Transaction Service | Safe tx object, Safe identity, mapped tx hash, `isExecuted` | exact Safe tx hash | no | cannot alone prove successful chain receipt |
 | Runtime endpoint | Ethereum Blockscout | mapped transaction hash, sender and success | exact Ethereum tx hash | no | cannot interpret policy compliance |
 | StudioNet Explorer | GenLayer network | contract call finality and deployed state | contract address + transaction hash | no | testnet behavior, not production readiness |

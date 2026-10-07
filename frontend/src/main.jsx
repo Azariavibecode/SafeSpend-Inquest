@@ -8,7 +8,7 @@ import"./styles.css";
 const EXPLORER="https://explorer-studio.genlayer.com";
 const DEFAULT_CONTRACT=import.meta.env.VITE_CONTRACT_ADDRESS||"";
 const blankCounts={policy_count:0,incident_count:0,assessed_count:0,settled_count:0,total_liability:"0"};
-const exampleSource={owner:"YOUR_GITHUB_OWNER",repo:"SafeSpendInquest",commit:"FULL_40_CHAR_COMMIT_SHA",path:"/fixtures/policies/example-policy.md",digest:"SHA256_OF_EXACT_FILE_BYTES",marker:"## POLICY SAFE-SPEND-001"};
+const exampleSource={owner:"Azariavibecode",repo:"SafeSpend-Inquest",commit:"f7e086259ba0244f6bca660215f3f37eefe4aff3",path:"/fixtures/policies/example-policy.md",digest:"ecf0c00801af162466e18536f5fc6f298133f96034a1c62552864f271a2269d1",marker:"## POLICY SAFE-SPEND-001"};
 const short=(v="")=>v?`${v.slice(0,7)}…${v.slice(-5)}`:"—";
 const parse=v=>{try{return JSON.parse(v)}catch{return null}};
 const txId=v=>typeof v==="string"?v:v?.txId;
