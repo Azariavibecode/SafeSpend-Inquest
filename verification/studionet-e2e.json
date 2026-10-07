@@ -1,0 +1,403 @@
+{
+  "generated_at": "2026-10-07T04:38:26.910Z",
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "contract": "0x4e4349F3DE5e1fE40a5642A9eD0563B0DF6fdBf2",
+  "source_commit": "ce687604bf8972d8e8ef8fdb286b26f56a16772e",
+  "source_scope": "The policies are synthetic sponsor declarations. Safe Transaction Service and Blockscout establish runtime identity and execution.",
+  "wallets": [
+    "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+    "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5"
+  ],
+  "safe": "0xEc834bD1F492a8Bd5aa71023550C44D4fB14632A",
+  "start_counts": {
+    "assessed_count": 1,
+    "incident_count": 1,
+    "policy_count": 1,
+    "settled_count": 0,
+    "total_liability": "2"
+  },
+  "final_counts": {
+    "assessed_count": 3,
+    "incident_count": 3,
+    "policy_count": 3,
+    "settled_count": 3,
+    "total_liability": "0"
+  },
+  "cases": [
+    {
+      "name": "compliant",
+      "expected": "COMPLIANT",
+      "policy_id": 0,
+      "incident_id": 0,
+      "incident": {
+        "claim_amount": "0",
+        "incident_id": 0,
+        "policy_id": 0,
+        "reason_code": "PURPOSE_ALLOWED",
+        "reporter": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+        "reporter_bond": "1",
+        "reporter_refunded": false,
+        "safe_tx_hash": "0x412389dabbc92c5ae61d7869b96522c105e1e841893764ddd922f73c9e99e9dc",
+        "settlement_recipient": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+        "sponsor_refunded": false,
+        "state": "SETTLED",
+        "verdict": "COMPLIANT"
+      },
+      "policy": {
+        "bond": "1",
+        "label": "e2e-compliant",
+        "policy_id": 0,
+        "safe": "0xec834bd1f492a8bd5aa71023550c44d4fb14632a",
+        "source": {
+          "commit": "ce687604bf8972d8e8ef8fdb286b26f56a16772e",
+          "digest": "86079913a1d1b3f84da934d1d114bfcb6dbe41bad4be8cce6423ac4d6527e56c",
+          "marker": "## POLICY E2E-COMPLIANT-001",
+          "owner": "Azariavibecode",
+          "path": "/fixtures/policies/e2e-compliant.md",
+          "repo": "SafeSpend-Inquest"
+        },
+        "sponsor": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+        "state": "CLOSED"
+      },
+      "assessment_attempts": [
+        {
+          "hash": "0x8eda0ab186c5f8621c9f4c150e83f76add720965a71b49777f9f2a8fbabc3ea8",
+          "result": "MAJORITY_DISAGREE",
+          "readback": "EVIDENCE_FROZEN"
+        },
+        {
+          "hash": "0x6d5665f061685c7b434f710341d131e53e33516a9a699f4646a85806c19a9976",
+          "result": "MAJORITY_AGREE",
+          "readback": "COMPLIANT"
+        }
+      ]
+    },
+    {
+      "name": "breach",
+      "expected": "BREACH",
+      "policy_id": 1,
+      "incident_id": 1,
+      "policy": {
+        "bond": "1",
+        "label": "e2e-breach",
+        "policy_id": 1,
+        "safe": "0xec834bd1f492a8bd5aa71023550c44d4fb14632a",
+        "source": {
+          "commit": "ce687604bf8972d8e8ef8fdb286b26f56a16772e",
+          "digest": "4fe76c5576b343845fa6b31f03586328e8efbc3eea8b7af91cb3dc8ce849b94e",
+          "marker": "## POLICY E2E-BREACH-001",
+          "owner": "Azariavibecode",
+          "path": "/fixtures/policies/e2e-breach.md",
+          "repo": "SafeSpend-Inquest"
+        },
+        "sponsor": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+        "state": "CLOSED"
+      },
+      "incident": {
+        "claim_amount": "0",
+        "incident_id": 1,
+        "policy_id": 1,
+        "reason_code": "ACTION_FORBIDDEN",
+        "reporter": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+        "reporter_bond": "1",
+        "reporter_refunded": false,
+        "safe_tx_hash": "0xb00c0d29568134d4fbec32ad37c46e11577572a2fcc4fb12dfa9274ff24f89a5",
+        "settlement_recipient": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+        "sponsor_refunded": false,
+        "state": "SETTLED",
+        "verdict": "BREACH"
+      },
+      "assessment_attempts": [
+        {
+          "hash": "0xaa63edc6b00e0d22d83d215399d17f0fc92cac2b55a14c182a59a134c43e2d75",
+          "result": "MAJORITY_DISAGREE",
+          "state": "EVIDENCE_FROZEN",
+          "verdict": ""
+        },
+        {
+          "hash": "0xe9eed7b876346e8a64a58e8a605abb7bddcf161cd919bd7c80f4d70e86d7a02c",
+          "result": "MAJORITY_DISAGREE",
+          "state": "EVIDENCE_FROZEN",
+          "verdict": ""
+        },
+        {
+          "hash": "0xecba40c02395f904dd42399a6f16f48e808945943841f929b477cc350cd5da99",
+          "result": "MAJORITY_AGREE",
+          "state": "ASSESSMENT_FINAL",
+          "verdict": "BREACH"
+        }
+      ]
+    },
+    {
+      "name": "inconclusive",
+      "expected": "INCONCLUSIVE",
+      "policy_id": 2,
+      "incident_id": 2,
+      "policy": {
+        "bond": "1",
+        "label": "e2e-inconclusive",
+        "policy_id": 2,
+        "safe": "0xec834bd1f492a8bd5aa71023550c44d4fb14632a",
+        "source": {
+          "commit": "ce687604bf8972d8e8ef8fdb286b26f56a16772e",
+          "digest": "4823a4d44c75477febf3c9822664e3a5928b307929ada2b0fb0296e58575005b",
+          "marker": "## POLICY E2E-INCONCLUSIVE-001",
+          "owner": "Azariavibecode",
+          "path": "/fixtures/policies/e2e-inconclusive.md",
+          "repo": "SafeSpend-Inquest"
+        },
+        "sponsor": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+        "state": "CLOSED"
+      },
+      "incident": {
+        "claim_amount": "0",
+        "incident_id": 2,
+        "policy_id": 2,
+        "reason_code": "POLICY_AMBIGUOUS",
+        "reporter": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+        "reporter_bond": "1",
+        "reporter_refunded": true,
+        "safe_tx_hash": "0xf1f7299be32f4bcf18046c36eee756aa89d2fb5d8695d5eee3f267ea180ad9b9",
+        "settlement_recipient": "",
+        "sponsor_refunded": true,
+        "state": "SETTLED",
+        "verdict": "INCONCLUSIVE"
+      },
+      "assessment_attempts": [
+        {
+          "hash": "0x906177a262b452baac5e95bba7479c51c5e4a930ccccb93b55141637c849087a",
+          "result": "MAJORITY_DISAGREE",
+          "state": "EVIDENCE_FROZEN",
+          "verdict": ""
+        },
+        {
+          "hash": "0x3c49dc8d847d252124be50953eedd827211f2da6ea8161725a953b67cfeced56",
+          "result": "MAJORITY_AGREE",
+          "state": "ASSESSMENT_FINAL",
+          "verdict": "INCONCLUSIVE"
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "label": "compliant_register_policy",
+      "hash": "0x8c4e0479c0f0748acbf7785c069b8030a7885cc87e03d4fcaa557dbc0f5ed2fc",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_authenticate_policy",
+      "hash": "0x521b85f6d2634e4117cdf30fa99a55bfe15e843493fa8308d4699674929998d5",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_failure_same_wallet",
+      "hash": "0x16fe9abad0792afabb7d83cc3c6cb001849844a3647b3c975274475714dbeb2a",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_open_incident",
+      "hash": "0x7e0d4b934ab84204aa3a33a9c21cec42783f99a4da194abf95007030a0a3fdcc",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_failure_replay",
+      "hash": "0x1e638747a8a939b47884722473a01ceff846244a81e42fe5bbb2f1c73c774458",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_freeze_runtime",
+      "hash": "0x01675845877ab4e94ee2ccced63434f8f1cb85d781de497aafdd98a26d4314fd",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_assess_1",
+      "hash": "0x8eda0ab186c5f8621c9f4c150e83f76add720965a71b49777f9f2a8fbabc3ea8",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE"
+    },
+    {
+      "label": "compliant_assess_2",
+      "hash": "0x6d5665f061685c7b434f710341d131e53e33516a9a699f4646a85806c19a9976",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "compliant_claim_settlement",
+      "hash": "0xa56647377b0d3ae04387f8edd6c863f70154da884e19ef9b34bba5b479adfabe",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_register_policy",
+      "hash": "0x0fcb279b2c606f2e19ff8f17d828410b7884dc6d36723f71fb4f793bbdfbeffd",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_authenticate_policy",
+      "hash": "0x9eb41aeb90d9e0c4c71802c6596d68bbea9903cf04724e1b3de8b4a9a8fc0dac",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_failure_same_wallet",
+      "hash": "0x32a522857da701b53ee89847453ecc785e8bb9d76709748539d8cef706a2ce94",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_open_incident",
+      "hash": "0xc431827e535211c4f6f3302719ce072094c00d1057dbd331deef9b66cad74454",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_failure_replay",
+      "hash": "0x08b1d611d8f01f4fd76279a4b4deeeddd290e7766aabcf7d323c3f4d8cdd0df1",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_freeze_runtime",
+      "hash": "0x666b5dd20a91b883ece52268fc14b4f191bd9c126366165e4d8888dcc2b06824",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_assess_1",
+      "hash": "0xaa63edc6b00e0d22d83d215399d17f0fc92cac2b55a14c182a59a134c43e2d75",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE"
+    },
+    {
+      "label": "breach_assess_2",
+      "hash": "0xe9eed7b876346e8a64a58e8a605abb7bddcf161cd919bd7c80f4d70e86d7a02c",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE"
+    },
+    {
+      "label": "breach_assess_3",
+      "hash": "0xecba40c02395f904dd42399a6f16f48e808945943841f929b477cc350cd5da99",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_failure_wrong_claimant",
+      "hash": "0x01c1c84379269bf5dd1ec09535e99a370fdc89fa6d703fcfb3c8ec8ff43b191c",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "breach_claim_settlement",
+      "hash": "0x606122551f213d98f08c41ec355e42b46a56b461bb1b3399abd0628c6585f6a1",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_register_policy",
+      "hash": "0x067af9791ccdc093301ff194525bf458b4d385fd605fb50ed752c44e9931e055",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_authenticate_policy",
+      "hash": "0x349ae596a356b42fdd3b5a9e2b08d509e22f02efd116bbd06f8eab9b374b8b60",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_failure_same_wallet",
+      "hash": "0x930538c2341aec04b89f47ffb76b701b95a82cab3789d5bd7195c5e4cd95f405",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_open_incident",
+      "hash": "0x2e1ba78cda699634139222469c60db5034865dc419ce103587a6e621b02fd976",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_failure_replay",
+      "hash": "0x0f50efeaa143e75e36533365d53f51f00be37872c674cf0e2f0b1df50743399f",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_freeze_runtime",
+      "hash": "0x2e67f56f0c2e50c9b42ff7fc6346a3d414ca711ed1b574e14a1b7246d32f13a0",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_assess_1",
+      "hash": "0x906177a262b452baac5e95bba7479c51c5e4a930ccccb93b55141637c849087a",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_DISAGREE"
+    },
+    {
+      "label": "inconclusive_assess_2",
+      "hash": "0x3c49dc8d847d252124be50953eedd827211f2da6ea8161725a953b67cfeced56",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_sponsor_refund",
+      "hash": "0x4dce515d79f664ff6e0f1ba45763f76de529c792e030fa88953c4a058e194d00",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "inconclusive_reporter_refund",
+      "hash": "0xd26daee93a3be04e20f5e6347e3a529a0aef32a4fc5b36fcf988b2aaca15208d",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE"
+    },
+    {
+      "label": "failure_double_settlement_claim",
+      "hash": "0x759a4fbe456c68853d293a78dd4c90d6125500be092b846b7ee249d1310b4579",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "pre_post_readback_unchanged": true
+    }
+  ]
+}

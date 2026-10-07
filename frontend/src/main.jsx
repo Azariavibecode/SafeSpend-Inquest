@@ -6,9 +6,7 @@ import{ExternalLink,FileSearch,RefreshCw,Scale,WalletCards}from"lucide-react";
 import"./styles.css";
 
 const EXPLORER="https://explorer-studio.genlayer.com";
-// Intentionally blank until the corrected post-E2E deployment is supplied.
-// The prior address is documented as superseded in verification/.
-const DEFAULT_CONTRACT=import.meta.env.VITE_CONTRACT_ADDRESS||"";
+const DEFAULT_CONTRACT=import.meta.env.VITE_CONTRACT_ADDRESS||"0x4e4349F3DE5e1fE40a5642A9eD0563B0DF6fdBf2";
 const blankCounts={policy_count:0,incident_count:0,assessed_count:0,settled_count:0,total_liability:"0"};
 const exampleSource={owner:"Azariavibecode",repo:"SafeSpend-Inquest",commit:"f7e086259ba0244f6bca660215f3f37eefe4aff3",path:"/fixtures/policies/example-policy.md",digest:"ecf0c00801af162466e18536f5fc6f298133f96034a1c62552864f271a2269d1",marker:"## POLICY SAFE-SPEND-001"};
 const short=(v="")=>v?`${v.slice(0,7)}…${v.slice(-5)}`:"—";

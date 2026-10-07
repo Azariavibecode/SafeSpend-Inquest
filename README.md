@@ -66,13 +66,15 @@ npm run build
 
 ## Deployment
 
-Superseded StudioNet deployment (do not submit):
+Current StudioNet deployment:
 
-- Contract: [`0xC9C416776A42676Ecd8b462465705c0834081678`](https://explorer-studio.genlayer.com/address/0xC9C416776A42676Ecd8b462465705c0834081678)
-- Source release: repository commit `243bd05d69ba94ebb79e9379ab0b52d889f973ae`
-- Status: superseded before E2E because it compared the Ethereum receipt executor (`from`) to the Safe instead of the `execTransaction` target (`to`).
+- Contract: [`0x4e4349F3DE5e1fE40a5642A9eD0563B0DF6fdBf2`](https://explorer-studio.genlayer.com/address/0x4e4349F3DE5e1fE40a5642A9eD0563B0DF6fdBf2)
+- Source release: repository commit `0ce6a39` plus the pinned E2E fixtures at `ce687604bf8972d8e8ef8fdb286b26f56a16772e`
+- Status: three live semantic branches and settlement paths verified; see [E2E record](verification/studionet-e2e.md).
 
-The next corrected address will replace this frontend default after deployment. A reviewer may replace it in the visible contract bar; the UI persists that explicit selection locally and links it to Explorer.
+Superseded deployment: `0xC9C416776A42676Ecd8b462465705c0834081678` used the wrong Ethereum receipt side for Safe runtime binding and is not the submission address.
+
+The current address is the frontend default. A reviewer may replace it in the visible contract bar; the UI persists that explicit selection locally and links it to Explorer.
 
 ## Reviewer quick path
 
@@ -86,4 +88,6 @@ The next corrected address will replace this frontend default after deployment. 
 8. Confirm every UI status against contract readback and the linked Explorer transaction.
 
 See [docs/TEST_RESOURCE_MANIFEST.md](docs/TEST_RESOURCE_MANIFEST.md) and [verification/RELEASE_CHECKLIST.md](verification/RELEASE_CHECKLIST.md) before making evidence claims.
+
+The live two-wallet E2E record for the current deployment is [here](verification/studionet-e2e.md), with machine-readable transaction/readback data in [studionet-e2e.json](verification/studionet-e2e.json).
 
